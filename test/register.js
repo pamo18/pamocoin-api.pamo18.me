@@ -26,7 +26,6 @@ describe('Register', () => {
                 .post("/register")
                 .send(person)
                 .end((err, res) => {
-                    console.log(res);
                     res.should.have.status(200);
                     res.body.should.be.an("object");
                     res.body.should.have.property("data");
